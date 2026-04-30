@@ -1,5 +1,57 @@
 var apiRoot = "https://api.github.com/";
 
+// Theme management
+function detectSystemTheme() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+    }
+    return 'light';
+}
+
+function initTheme() {
+    var savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme && (savedTheme === 'dark' || savedTheme === 'light')) {
+        setTheme(savedTheme);
+    } else {
+        // If no saved preference, use system theme
+        var systemTheme = detectSystemTheme();
+        setTheme(systemTheme);
+    }
+}
+
+function updateThemeDisplay() {
+    var currentTheme = localStorage.getItem('theme') || 'light';
+    var themeKey = currentTheme === 'dark' ? 'darkTheme' : 'lightTheme';
+    var displayText = i18n.t(themeKey);
+    var display = document.getElementById('theme-display');
+    if (display) {
+        display.textContent = displayText;
+    }
+}
+
+function setTheme(theme) {
+    if (theme === 'dark') {
+        document.body.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.body.classList.remove('dark-theme');
+        localStorage.setItem('theme', 'light');
+    }
+    updateThemeDisplay();
+}
+
+function toggleTheme() {
+    var currentTheme = localStorage.getItem('theme') || 'light';
+    var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+}
+
+// Initialize theme when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    initTheme();
+});
+
 // Return a HTTP query variable
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
