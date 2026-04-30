@@ -21,7 +21,7 @@ function initTheme() {
 }
 
 function updateThemeDisplay() {
-    var currentTheme = localStorage.getItem('theme') || 'light';
+    var currentTheme = localStorage.getItem('theme') || 'dark';
     var themeKey = currentTheme === 'dark' ? 'darkTheme' : 'lightTheme';
     var displayText = i18n.t(themeKey);
     var display = document.getElementById('theme-display');
@@ -42,7 +42,7 @@ function setTheme(theme) {
 }
 
 function toggleTheme() {
-    var currentTheme = localStorage.getItem('theme') || 'light';
+    var currentTheme = localStorage.getItem('theme') || 'dark';
     var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
 }
