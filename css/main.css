@@ -1,17 +1,4 @@
 :root {
-    --bg-color: #ffffff;
-    --text-color: #333333;
-    --border-color: rgba(127, 140, 141, 0.4);
-    --light-bg: rgba(127, 140, 141, 0.1);
-    --link-color: rgba(66, 139, 202, 1);
-    --navbar-bg: #f8f8f8;
-    --navbar-border: #e7e7e7;
-    --footer-bg: rgba(210, 210, 210, 0.2);
-    --footer-border: rgba(210, 210, 210, 0.4);
-    --code-bg: rgba(127, 140, 141, 0.1);
-}
-
-body.dark-theme {
     --bg-color: #1e1e1e;
     --text-color: #e0e0e0;
     --border-color: rgba(200, 200, 200, 0.2);
@@ -22,6 +9,19 @@ body.dark-theme {
     --footer-bg: rgba(50, 50, 50, 0.5);
     --footer-border: rgba(100, 100, 100, 0.4);
     --code-bg: rgba(255, 255, 255, 0.1);
+}
+
+body.light-theme {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --border-color: rgba(127, 140, 141, 0.4);
+    --light-bg: rgba(127, 140, 141, 0.1);
+    --link-color: rgba(66, 139, 202, 1);
+    --navbar-bg: #f8f8f8;
+    --navbar-border: #e7e7e7;
+    --footer-bg: rgba(210, 210, 210, 0.2);
+    --footer-border: rgba(210, 210, 210, 0.4);
+    --code-bg: rgba(127, 140, 141, 0.1);
 }
 
 html * {
