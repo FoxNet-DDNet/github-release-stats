@@ -22,15 +22,21 @@
                 </button>
                 <a class="navbar-brand" href=".">
                     <span class="glyphicon glyphicon-stats"></span>&nbsp;
-                    Github Release Stats
+                    <span id="navbar-title">Github Release Stats</span>
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="main-navbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
+                        <a href="#" id="theme-toggle" onclick="toggleTheme(); return false;">
+                            <span class="glyphicon glyphicon-adjust"></span>&nbsp;
+                            <span id="theme-display">Light</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="https://github.com/Somsubhra/github-release-stats" target="_blank">
                             <span class="glyphicon glyphicon-eye-open"></span>&nbsp;
-                            View project on Github
+                            <span id="view-github">View project on Github</span>
                         </a>
                     </li>
                 </ul>
@@ -40,7 +46,7 @@
     <div class="container">
         <div class="row" id="search">
             <div class="col-md-4 col-md-offset-4">
-                <h1>Enter project details...</h1>
+                <h1 id="enter-details">Enter project details...</h1>
                 <div class="form form-inline">
                     <div class="form-group">
                         <input type="text" class="form-control" id="username" placeholder="Github username">
@@ -53,11 +59,11 @@
             </div>
         </div>
         <div class="row" id="description">
-            <h1>...and get the latest release stats like download counts, release dates, authors for any Github project.</h1>
+            <h1 id="desc-text">...and get the latest release stats like download counts, release dates, authors for any Github project.</h1>
         </div>
         <div class="row" id="title">
             <h1><span class="username"></span>/<span class="repository"></span></h1>
-            <span class="description">release stats</span>
+            <span class="description" id="title-description">release stats</span>
         </div>
         <div class="row" id="ads">
             <div class="col-md-6 col-md-offset-2">
@@ -82,7 +88,7 @@
                     <li><a id="get-next-results-button" href="#">Older</a></li>
                 </ul>
                 <div id="per-page">
-                    <label class="">Per page</label>
+                    <label id="per-page-label" class="">Per page</label>
                     <select class="form-control">
                         <option>5</option>
                         <option>10</option>
