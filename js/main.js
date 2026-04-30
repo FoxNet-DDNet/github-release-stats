@@ -2,10 +2,10 @@ var apiRoot = "https://api.github.com/";
 
 // Theme management
 function detectSystemTheme() {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        return 'dark';
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        return 'light';
     }
-    return 'light';
+    return 'dark';
 }
 
 function initTheme() {
