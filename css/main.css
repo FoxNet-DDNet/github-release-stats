@@ -25,7 +25,7 @@ body.dark-theme {
 }
 
 html * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', 'Noto Sans SC', 'Microsoft YaHei', '微软雅黑', SimHei, sans-serif;
 }
 
 a, a:hover {
@@ -237,6 +237,12 @@ body {
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
+.navbar-default {
+    background-color: var(--navbar-bg);
+    border-color: var(--navbar-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
 .navbar-default .navbar-brand,
 .navbar-default .nav > li > a {
     color: var(--text-color);
@@ -267,6 +273,7 @@ body {
     border-color: var(--border-color);
     color: var(--text-color);
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
 
 #ads {
     margin-top: 20px;
