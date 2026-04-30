@@ -32,9 +32,11 @@ function updateThemeDisplay() {
 
 function setTheme(theme) {
     if (theme === 'dark') {
+        document.documentElement.classList.remove('light-theme');
         document.body.classList.add('dark-theme');
         localStorage.setItem('theme', 'dark');
     } else {
+        document.documentElement.classList.add('light-theme');
         document.body.classList.remove('dark-theme');
         localStorage.setItem('theme', 'light');
     }

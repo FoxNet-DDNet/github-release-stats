@@ -9,6 +9,20 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="third-party/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            var prefersDark = !window.matchMedia || window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var useDark = saved ? saved === 'dark' : prefersDark;
+            if (!useDark) {
+                document.documentElement.classList.add('light-theme');
+            }
+            document.documentElement.classList.add('no-transition');
+            window.addEventListener('load', function() {
+                document.documentElement.classList.remove('no-transition');
+            });
+        })();
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-default" role="navigation">
