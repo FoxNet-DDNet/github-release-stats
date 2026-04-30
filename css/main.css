@@ -11,7 +11,8 @@
     --code-bg: rgba(255, 255, 255, 0.1);
 }
 
-body.light-theme {
+body.light-theme,
+html.light-theme body {
     --bg-color: #ffffff;
     --text-color: #333333;
     --border-color: rgba(127, 140, 141, 0.4);
@@ -22,6 +23,10 @@ body.light-theme {
     --footer-bg: rgba(210, 210, 210, 0.2);
     --footer-border: rgba(210, 210, 210, 0.4);
     --code-bg: rgba(127, 140, 141, 0.1);
+}
+
+html.no-transition * {
+    transition: none !important;
 }
 
 html * {
